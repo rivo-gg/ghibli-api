@@ -1,16 +1,8 @@
 /* Import packages */
 import dotenv from "dotenv";
 import express, { Express } from "express";
-import kill from "kill-port";
 
 dotenv.config();
-
-// Kill process if port is in use
-try {
-  kill(6543, "tcp");
-} catch (error) {
-  /* Empty */
-}
 
 // Clear console
 console.clear();
