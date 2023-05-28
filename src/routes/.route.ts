@@ -7,7 +7,7 @@ export default (urlName: string): Router => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   api.get(`/${urlName}`, (req: Request, res: Response) => {
-    res.send("Online");
+    res.redirect("/docs");
   });
 
   return api;

@@ -1,13 +1,17 @@
 /* Import packages */
 const chalk = require("chalk");
-import { Express, Request, Response, NextFunction } from "express";
+import express, { Express, Request, Response, NextFunction } from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import { join } from "path";
 
 // Export middleware
 export default (api: Express): Express => {
   // Set trust proxy
   api.set("trust proxy", 1);
+
+  // Static files
+  api.use("/assets", express.static(join(__dirname, "..", "assets")));
 
   // Parse body
   api.use(bodyParser.json());
@@ -38,11 +42,11 @@ export default (api: Express): Express => {
   }
 
   // Set port
-  api.listen(3001, () => {
+  api.listen(6543, () => {
     console.log(
       chalk.red("API") +
         chalk.grey(" | ") +
-        chalk.white(`Listening on port ${chalk.greenBright("3001")}`)
+        chalk.white(`Listening on port ${chalk.greenBright("6543")}`)
     );
   });
 

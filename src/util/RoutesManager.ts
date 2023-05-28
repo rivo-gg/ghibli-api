@@ -8,8 +8,6 @@ const chalk = require("chalk");
 export default (): Router => {
   const api: Router = Router();
 
-  api.use("/assets", express.static(join(__dirname, "..", "assets")));
-
   // Read route directory
   const routeDir = readdirSync(join(__dirname, "..", "routes"));
   const dataRaw = readFileSync(join(__dirname, "data", "data.json"));

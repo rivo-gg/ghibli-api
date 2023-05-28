@@ -7,9 +7,20 @@ export default (urlName: string, data: any): Router => {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   api.get(`/${urlName}:id`, (req: Request, res: Response) => {
-    const searchData = data.species.filter((v: any) => v.id == req.params.id);
+    let searchData = [];
+    if (req.params.id.split("-").length == 5) {
+      searchData = data.species.filter((s: any) => s.id == req.params.id);
+    } else {
+      searchData = data.species.filter((s: any) =>
+        s.name.includes(req.params.id)
+      );
+    }
 
-    res.json(searchData);
+    if (searchData.length == 0) {
+      res.send("null");
+    } else {
+      res.json(searchData);
+    }
   });
 
   return api;
