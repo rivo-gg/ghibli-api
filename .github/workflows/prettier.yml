@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
   #Runs at 01:01 UTC
   schedule:
-    - cron: "0 */1 * * *"
+    - cron: "1 1 * * *"
 
 concurrency:
   group: "main-branch"
@@ -24,7 +24,7 @@ jobs:
       - run: npm ci
 
       - name: Prettier
-        run: npx prettier --write src/**/*.ts
+        run: npx prettier --write \"src/**/*.ts\
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
