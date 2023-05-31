@@ -1734,7 +1734,8 @@
       "name": "Air Destroyer Goliath",
       "description": "A military airship utilized by the government to access Laputa",
       "vehicle_class": "Airship",
-      "length": "1,000",
+      "image": "https://i.imgur.com/7JNVuqb.png",
+      "length": "348",
       "pilot": "https://ghibli.rest/people/40c005ce-3725-4f15-8409-3e1b1b14b583",
       "films": [
         "https://ghibli.rest/films/2baf70d1-42bb-4437-b551-e5fed5a87abe"
@@ -1743,9 +1744,10 @@
     },
     {
       "id": "d8f893b5-1dd9-41a1-9918-0099c1aa2de8",
-      "name": "Red Wing",
+      "name": "Savoia S.21",
       "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
       "vehicle_class": "Airplane",
+      "image": "https://imgur.com/iem7gCF.png",
       "length": "20",
       "pilot": "https://ghibli.rest/people/6523068d-f5a9-4150-bf5b-76abe6fb42c3",
       "films": [
@@ -1758,7 +1760,8 @@
       "name": "Sosuke's Boat",
       "description": "A toy boat where Sosuke plays",
       "vehicle_class": "Boat",
-      "length": "10",
+      "image": "https://i.imgur.com/8fB9uRB.png",
+      "length": "2.4 to 3",
       "pilot": "https://ghibli.rest/people/a10f64f3-e0b6-4a94-bf30-87ad8bc51607",
       "films": [
         "https://ghibli.rest/films/758bf02e-3122-46e0-884e-67cf83df1786"

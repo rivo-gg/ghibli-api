@@ -9,7 +9,6 @@
 body {
   background-color: #292929;
   color: #ffffff !important;
-  user-select: none !important;
 }
 
 .opblock-tag {
