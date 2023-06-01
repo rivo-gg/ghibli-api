@@ -6,15 +6,14 @@ export default (urlName: string, data: any): Router => {
   const api = Router();
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  api.get(`/${urlName.toLowerCase()}:id`, (req: Request, res: Response) => {
+  api.get(`/${urlName}:id`, (req: Request, res: Response) => {
     let searchData = [];
-    const lowercaseId = req.params.id.toLowerCase();
   
     if (req.params.id.split("-").length == 5) {
-      searchData = data.films.filter((f: any) => f.id == lowercaseId);
+      searchData = data.films.filter((f: any) => f.id == req.params.id.toLowerCase());
     } else {
       searchData = data.films.filter((f: any) =>
-        f.title.toLowerCase().includes(lowercaseId)
+        f.title.toLowerCase().includes(req.params.id.toLowerCase())
       );
     }
   

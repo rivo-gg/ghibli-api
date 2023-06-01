@@ -8,18 +8,19 @@ export default (urlName: string, data: any): Router => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   api.get(`/${urlName}:id`, (req: Request, res: Response) => {
     let searchData = [];
+
     if (req.params.id.split("-").length == 5) {
-      searchData = data.locations.filter((l: any) => l.id == req.params.id);
+      searchData = data.locations.filter((l: any) => l.id == req.params.id.toLowerCase());
     } else {
       searchData = data.locations.filter((l: any) =>
-        l.name.includes(req.params.id)
+        l.name.includes(req.params.id.toLowerCase())
       );
     }
 
     if (searchData.length == 0) {
-      res.send("null");
+      res.status(404).json(null);
     } else {
-      res.json(searchData);
+      res.status(200).json(searchData);
     }
   });
 
