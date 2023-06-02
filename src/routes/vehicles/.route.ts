@@ -8,9 +8,11 @@ export default (urlName: string, data: any): Router => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   api.get(`/${urlName}:id`, (req: Request, res: Response) => {
     let searchData = [];
-    
+
     if (req.params.id.split("-").length == 5) {
-      searchData = data.vehicles.filter((v: any) => v.id == req.params.id.toLowerCase());
+      searchData = data.vehicles.filter(
+        (v: any) => v.id == req.params.id.toLowerCase()
+      );
     } else {
       searchData = data.vehicles.filter((v: any) =>
         v.name.includes(req.params.id.toLowerCase())

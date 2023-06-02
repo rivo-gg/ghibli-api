@@ -10,7 +10,9 @@ export default (urlName: string, data: any): Router => {
     let searchData = [];
 
     if (req.params.id.split("-").length == 5) {
-      searchData = data.locations.filter((l: any) => l.id == req.params.id.toLowerCase());
+      searchData = data.locations.filter(
+        (l: any) => l.id == req.params.id.toLowerCase()
+      );
     } else {
       searchData = data.locations.filter((l: any) =>
         l.name.includes(req.params.id.toLowerCase())
