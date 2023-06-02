@@ -8,15 +8,17 @@ export default (urlName: string, data: any): Router => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   api.get(`/${urlName}:id`, (req: Request, res: Response) => {
     let searchData = [];
-  
+
     if (req.params.id.split("-").length == 5) {
-      searchData = data.films.filter((f: any) => f.id == req.params.id.toLowerCase());
+      searchData = data.films.filter(
+        (f: any) => f.id == req.params.id.toLowerCase()
+      );
     } else {
       searchData = data.films.filter((f: any) =>
         f.title.toLowerCase().includes(req.params.id.toLowerCase())
       );
     }
-  
+
     if (searchData.length == 0) {
       res.status(404).json(null);
     } else {
