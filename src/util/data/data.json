@@ -268,10 +268,12 @@
       "running_time": "124",
       "rt_score": "97",
       "people": [
-        "https://ghibli.rest/people/8228751c-bdc1-4b8d-a6eb-ca0eb909568f"
+        "https://ghibli.rest/people/8228751c-bdc1-4b8d-a6eb-ca0eb909568f",
+        "https://ghibli.rest/people/c2d7bf24-0c3d-439b-9c1b-29e20e36d643"
       ],
       "species": [
-        "https://ghibli.rest/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+        "https://ghibli.rest/species/af3910a6-429f-4c74-9ad5-dfe1c4aa04f2",
+        "https://ghibli.rest/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4"
       ],
       "locations": ["https://ghibli.rest/locations/"],
       "vehicles": ["https://ghibli.rest/vehicles/"],
@@ -793,6 +795,19 @@
       "url": "https://ghibli.rest/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b"
     },
     {
+      "id": "c2d7bf24-0c3d-439b-9c1b-29e20e36d643",
+      "name": "No-Face",
+      "age": "Unknown",
+      "gender": "Unclear",
+      "eye_color": "None",
+      "hair_color": "None",
+      "films": [
+        "https://ghibli.rest/films/dc2e6bd1-8156-4886-adff-b39e6043af0c"
+      ],
+      "species": "https://ghibli.rest/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4",
+      "url": "https://ghibli.rest/people/c2d7bf24-0c3d-439b-9c1b-29e20e36d643"
+    },
+    {
       "id": "e9356bb5-4d4a-4c93-aadc-c83e514bffe3",
       "name": "Moro",
       "gender": "Female",
@@ -872,7 +887,7 @@
     },
     {
       "id": "08ffbce4-7f94-476a-95bc-76d3c3969c19",
-      "name": "Granny",
+      "name": "Zeniba",
       "gender": "Female",
       "age": "Elder",
       "eye_color": "Black",
@@ -1326,8 +1341,8 @@
     {
       "id": "6ba60a86-7c74-4ec4-a6f4-7112b5705a2f",
       "name": "Gondoa",
-      "climate": "TODO",
-      "terrain": "TODO",
+      "climate": "Continental",
+      "terrain": "Valley",
       "surface_water": "40",
       "residents": ["TODO"],
       "films": [
@@ -1338,10 +1353,10 @@
     {
       "id": "fb083a4e-77b2-4623-a2e0-6bbca5bfd5b2",
       "name": "Ursula's Log Cabin",
-      "climate": "TODO",
-      "terrain": "TODO",
+      "climate": "Mild",
+      "terrain": "Forest",
       "surface_water": "40",
-      "residents": ["TODO"],
+      "residents": ["https://ghibli.rest/people/bc838920-7849-43ea-bfb8-7d5e98dc20b6"],
       "films": [
         "https://ghibli.rest/films/ea660b10-85c4-4ae3-8a5f-41cea3648e3e"
       ],
@@ -1646,7 +1661,7 @@
       "classification": "Spirit",
       "eye_colors": "Red",
       "hair_colors": "Light Orange",
-      "url": "htps://ghibliapi.herokuapp.com/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4",
+      "url": "https://ghibli.rest/species/b5a92d0e-5fb4-43d4-ba60-c012135958e4",
       "people": [
         "https://ghibli.rest/people/ca568e87-4ce2-4afa-a6c5-51f4ae80a60b"
       ],
