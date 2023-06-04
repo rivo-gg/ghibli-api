@@ -5,12 +5,12 @@ import { Router, Request, Response } from "express";
 export default (urlName: string, data: any): Router => {
   const api = Router();
 
-  // Search by id
-  api.get(`/${urlName}:id`, (req: Request, res: Response) => {
-    let searchData = [];
+  // Random
+  api.get(`/${urlName}random`, (req: Request, res: Response) => {
+    let searchData: any = [];
 
-    searchData = data.species.filter(
-      (s: any) => s.id == req.params.id.toLowerCase()
+    searchData.push(
+      data.species[Math.round(Math.random() * (data.species.length - 1) + 0)]
     );
 
     if (searchData.length == 0) {
@@ -20,17 +20,23 @@ export default (urlName: string, data: any): Router => {
     }
   });
 
-  // Search by title
+  // Search
   api.get(`/${urlName}`, (req: Request, res: Response) => {
     let searchData = [];
 
-    searchData = data.species.filter((s: any) =>
-      String(s.name)
-        .toLowerCase()
-        .includes(String(req.query.search).toLowerCase())
-    );
-
-    if (!req.query.search) searchData = data.species;
+    if (req.query.id) {
+      searchData = data.species.filter(
+        (s: any) => s.id == String(req.query.id).toLowerCase()
+      );
+    } else if (req.query.search) {
+      searchData = data.species.filter((s: any) =>
+        String(s.name)
+          .toLowerCase()
+          .includes(String(req.query.search).toLowerCase())
+      );
+    } else {
+      searchData = data.species;
+    }
 
     if (searchData.length == 0) {
       res.status(404).json(null);
