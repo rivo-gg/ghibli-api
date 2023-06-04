@@ -1,11 +1,8 @@
 /* Import packages */
 const chalk = require("chalk");
-import dotenv from "dotenv";
-dotenv.config();
 import express, { Express, Request, Response, NextFunction } from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-import mongoose from "mongoose";
 import { join } from "path";
 
 // Export middleware
@@ -43,17 +40,6 @@ export default (api: Express): Express => {
       next();
     });
   }
-
-  // Connect to MongoDB
-mongoose.connect(process.env.MONGOURI || "", {
-
-})
-  .then(() => console.log(
-    chalk.red("DB") +
-      chalk.grey(" | ") +
-      chalk.white(`Sucesfully connected to ${chalk.greenBright("MongoDB")}`)
-  ))
-  .catch((error) => console.error("MongoDB connection error:", error));
 
   // Set port
   api.listen(6543, () => {
