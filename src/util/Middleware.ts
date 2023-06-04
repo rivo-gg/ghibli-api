@@ -25,8 +25,12 @@ export default (api: Express): Express => {
     })
   );
 
-  if (process.env.ENABLE_LOGS == "true") {
+  let count: number = 0;
+
+  if (process.env.ENABLE_LOGS) {
     api.use((req: Request, res: Response, next: NextFunction) => {
+      if(req.method == "GET") { count++;}
+      console.log(count)
       console.log(
         chalk.yellow("CALL") +
           chalk.grey(" | ") +

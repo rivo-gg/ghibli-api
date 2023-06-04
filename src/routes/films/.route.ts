@@ -5,7 +5,6 @@ import { Router, Request, Response } from "express";
 export default (urlName: string, data: any): Router => {
   const api = Router();
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   api.get(`/${urlName}:id`, (req: Request, res: Response) => {
     let searchData = [];
 
