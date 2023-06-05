@@ -51,15 +51,14 @@ export default (api: Express): Express => {
         const stats = JSON.parse(String(raw));
 
         const today = new Date();
-        const dateIdentifier = `${
-          String(today.getDay()).length == 2
-            ? today.getDay()
-            : "0" + today.getDay()
-        }.${
-          String(today.getMonth()).length == 2
-            ? today.getMonth()
-            : "0" + today.getMonth()
-        }.${today.getFullYear()}`;
+
+        const currentDate = new Date();
+        const day = String(currentDate.getDate()).padStart(2, '0');
+        const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // January is 0
+        const year = currentDate.getFullYear();
+        
+        const formattedDate = `${day}.${month}.${year}`;
+        const dateIdentifier = formattedDate;
         let statsToday = stats[dateIdentifier];
         if (!statsToday || statsToday == undefined) {
           stats[dateIdentifier] = [];
