@@ -9,7 +9,7 @@
 
 /**
  * @swagger
- * /films?=:id:
+ * /films?id=:id:
  *   get:
  *     summary: Sends you specific information about a film
  *     tags: [Film]

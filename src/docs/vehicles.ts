@@ -9,7 +9,7 @@
 
 /**
  * @swagger
- * /vehicles?=:id:
+ * /vehicles?id=:id:
  *   get:
  *     summary: Sends you specific information about a vehicle
  *     tags: [Vehicles]
