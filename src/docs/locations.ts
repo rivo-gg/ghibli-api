@@ -9,7 +9,7 @@
 
 /**
  * @swagger
- * /locations/:id:
+ * /locations?=:id:
  *   get:
  *     summary: Sends you specific information about a location
  *     tags: [Location]

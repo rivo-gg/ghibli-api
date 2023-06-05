@@ -9,7 +9,7 @@
 
 /**
  * @swagger
- * /species/:id:
+ * /species?=:id:
  *   get:
  *     summary: Sends you specific information about a species
  *     tags: [Species]
