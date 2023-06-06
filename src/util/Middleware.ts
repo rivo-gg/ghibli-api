@@ -53,10 +53,10 @@ export default (api: Express): Express => {
         const today = new Date();
 
         const currentDate = new Date();
-        const day = String(currentDate.getDate()).padStart(2, '0');
-        const month = String(currentDate.getMonth() + 1).padStart(2, '0'); // January is 0
+        const day = String(currentDate.getDate()).padStart(2, "0");
+        const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // January is 0
         const year = currentDate.getFullYear();
-        
+
         const formattedDate = `${day}.${month}.${year}`;
         const dateIdentifier = formattedDate;
         let statsToday = stats[dateIdentifier];
@@ -80,8 +80,8 @@ export default (api: Express): Express => {
           join(__dirname, "data", "stats.json"),
           JSON.stringify(stats, null, 2)
         );
-      } 
-      
+      }
+
       if (urls.includes(req.url.split("?")[0])) {
         console.log(
           chalk.yellow("CALL") +
