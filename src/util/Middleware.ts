@@ -35,26 +35,21 @@ export default (api: Express): Express => {
         "/locations/random",
         "/people",
         "/people/random",
-        "/ping",
-        "/stats",
         "/species/",
         "/species/random",
         "/vehicles",
         "/vehicles/random",
         "/invite",
         "/donate",
-        "/",
       ];
 
       if (req.method == "GET" && urls.includes(req.url.split("?")[0])) {
         const raw = fs.readFileSync(join(__dirname, "data", "stats.json"));
         const stats = JSON.parse(String(raw));
 
-        const today = new Date();
-
         const currentDate = new Date();
         const day = String(currentDate.getDate()).padStart(2, "0");
-        const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // January is 0
+        const month = String(currentDate.getMonth() + 1).padStart(2, "0");
         const year = currentDate.getFullYear();
 
         const formattedDate = `${day}.${month}.${year}`;
