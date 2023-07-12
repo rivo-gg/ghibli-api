@@ -1,6 +1,29 @@
 {
   "films": [
     {
+      "id": "d6bd6efc-37b2-4c40-b092-367cea8c88fe",
+      "title": "How Do You Live?",
+      "original_title": "きみたちはどういきるか",
+      "original_title_romanised": "Kimitachi wa Dō Ikiru ka",
+      "image": "https://m.media-amazon.com/images/M/MV5BOTkxN2MwNmUtYTQwZC00NmVhLTkxM2ItZjY5ODA4ZDhlYTE4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
+      "movie_banner": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d2/How_Do_You_Live_Poster_2.jpg",
+      "description": "The psychological growth of a teenage boy through interactions with his friends and uncle.",
+      "director": "Hayao Miyazaki",
+      "producer": "Toshio Suzuki",
+      "release_date": "2023",
+      "running_time": "124",
+      "rt_score": "TBA",
+      "people": [],
+      "species": [
+        "https://ghibli.rest/species?id=af3910a6-429f-4c74-9ad5-dfe1c4aa04f2"
+      ],
+      "locations": ["https://ghibli.rest/locations?id="],
+      "vehicles": [
+        ""
+      ],
+      "url": "https://ghibli.rest/films?id=d6bd6efc-37b2-4c40-b092-367cea8c88fe"
+    },
+    {
       "id": "2baf70d1-42bb-4437-b551-e5fed5a87abe",
       "title": "Castle in the Sky",
       "original_title": "天空の城ラピュタ",
