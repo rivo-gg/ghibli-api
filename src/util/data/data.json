@@ -2,11 +2,11 @@
   "films": [
     {
       "id": "d6bd6efc-37b2-4c40-b092-367cea8c88fe",
-      "title": "How Do You Live?",
-      "original_title": "きみたちはどういきるか",
+      "title": "The Boy and the Heron",
+      "original_title": "君たちはどう生きるか",
       "original_title_romanised": "Kimitachi wa Dō Ikiru ka",
-      "image": "https://m.media-amazon.com/images/M/MV5BOTkxN2MwNmUtYTQwZC00NmVhLTkxM2ItZjY5ODA4ZDhlYTE4XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg",
-      "movie_banner": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d2/How_Do_You_Live_Poster_2.jpg",
+      "image": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d2/How_Do_You_Live_Poster_2.jpg",
+      "movie_banner": "https://static.wikia.nocookie.net/studio-ghibli/images/5/53/The_Boy_and_the_Heron_04.jpg/revision/latest/scale-to-width-down/1000?cb=20230821211402",
       "description": "The psychological growth of a teenage boy through interactions with his friends and uncle.",
       "director": "Hayao Miyazaki",
       "producer": "Toshio Suzuki",
