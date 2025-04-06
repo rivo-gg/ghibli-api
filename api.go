@@ -1,10 +1,12 @@
 package main
 
 import (
+	"log"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/rivo-gg/ghibli-api/config"
+	"github.com/rivo-gg/ghibli-api/database"
 )
 
 func main() {
@@ -16,16 +18,11 @@ func main() {
 		gin.SetMode(gin.ReleaseMode)
 	}
 
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
-	router.POST("/ping", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{
-			"message": "pong",
-		})
-	})
+	if err := db.Init(); err != nil {
+		log.Fatalf("Error initializing database: %v", err)
+	}
+
+	router.GET("/ping", )
 	router.Use(config.CorsConfig())
 	router.Run(":" + config.Conf.Port)
 
